@@ -1,0 +1,17 @@
+{
+  "name": "materialize-webpack",
+  "version": "1.0.0",
+  "description": "Materialize template with webpack",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usk83/materialize-webpack.git"
+  },
+  "author": "usk",
+  "bugs": {
+    "url": "https://github.com/usk83/materialize-webpack/issues"
+  },
+  "homepage": "https://github.com/usk83/materialize-webpack#readme"
+}
