@@ -13,5 +13,12 @@
   "bugs": {
     "url": "https://github.com/usk83/materialize-webpack/issues"
   },
-  "homepage": "https://github.com/usk83/materialize-webpack#readme"
+  "homepage": "https://github.com/usk83/materialize-webpack#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.98.2"
+  }
 }
