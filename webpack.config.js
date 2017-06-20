@@ -2,12 +2,18 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const isDevelopment = process.env.NODE_ENV === 'development' || process.env.NODE_ENV === undefined;
+const devtool = isDevelopment ? 'source-map' : '';
+const styleOutputStyle = isDevelopment ? 'expanded' : 'compressed';
+
 module.exports = [{
   entry: path.join(__dirname, 'js', 'main.js'),
   output: {
     path: path.join(__dirname, 'js'),
     filename: 'bundle.js'
   },
+  cache: isDevelopment,
+  devtool: devtool,
   resolve: {
     alias: {
       jquery: path.join(__dirname, 'node_modules', 'jquery')
@@ -26,7 +32,8 @@ module.exports = [{
     path: path.join(__dirname, 'css'),
     filename: 'bundle.css'
   },
-  devtool: 'source-map',
+  cache: isDevelopment,
+  devtool: devtool,
   module: {
     rules: [
       {
@@ -37,14 +44,14 @@ module.exports = [{
             {
               loader: 'css-loader',
               options: {
-                sourceMap: true
+                sourceMap: isDevelopment
               }
             },
             {
               loader: 'sass-loader',
               options: {
-                outputStyle: 'expanded',
-                sourceMap: true
+                outputStyle: styleOutputStyle,
+                sourceMap: isDevelopment
               }
             }
           ]
