@@ -1,7 +1,7 @@
 {
   "name": "materialize-webpack",
   "version": "1.0.0",
-  "description": "Materialize template with webpack",
+  "description": "Materialize Starter Template with webpack",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
