@@ -4,7 +4,8 @@
   "description": "Materialize template with webpack",
   "scripts": {
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm js/bundle.* css/bundle.* fonts/MaterialIcons-Regular.* rm fonts/Roboto-*"
   },
   "repository": {
     "type": "git",
