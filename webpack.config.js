@@ -7,6 +7,11 @@ module.exports = {
     path: path.join(__dirname, "js"),
     filename: "bundle.js"
   },
+  resolve: {
+    alias: {
+      jquery: path.join(__dirname, 'node_modules', 'jquery')
+    }
+  },
   plugins: [
     new webpack.ProvidePlugin({
       $: "jquery",
